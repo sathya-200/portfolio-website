@@ -9,7 +9,12 @@
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Inter', sans-serif;
   }
-  *{box-sizing:border-box;}
+  
+  *{box-sizing:border-box;
+  margin: 20;
+    padding: 10;
+    border-radius: 3pc;
+    }
   html{scroll-behavior:smooth;}
   body{
     margin:0;background:var(--bg);color:var(--para);
@@ -30,7 +35,7 @@
     overflow: hidden;
     margin: 0 auto;
     background: linear-gradient(160deg, #00c6ff, #0072ff);
-    padding: 5px;
+    padding: 50px;
 }
 
 .photo-frame img {
@@ -72,7 +77,7 @@
 
   /* ---------- hero ---------- */
   .hero{
-    padding:90px 0 70px;
+    padding:50px 0 70px;
     background:radial-gradient(circle at 80% 10%, rgba(37,99,235,0.18), transparent 55%),
                radial-gradient(circle at 10% 90%, rgba(56,189,248,0.12), transparent 50%);
   }
@@ -90,6 +95,17 @@
     background:linear-gradient(160deg, var(--primary), var(--secondary));
     padding:5px;margin:0 auto;
   }
+  .hero-grid{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+  }
+
+.hero-grid{
+    text-align:center;
+}
+
   .photo-frame .photo-inner{
     width:100%;height:100%;border-radius:50%;
     background:var(--card);
@@ -104,7 +120,31 @@
   .section-title{font-size:clamp(24px,3.6vw,32px);margin-bottom:34px;}
 
   /* ---------- about ---------- */
-  .about-content p{max-width:720px;font-size:15.5px;}
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-right {
+    flex: 1;
+}
+
+.about-content p {
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.about-right h2 {
+    margin-bottom: 50px;
+}
+
 
   /* ---------- skills ---------- */
   .skills-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
@@ -186,6 +226,11 @@
     background:var(--card);border:1px solid var(--line);border-radius:12px;padding:36px;
     text-align:center;
   }
+  .btn-row{
+    display: flex;
+    justify-content: center;
+    margin-top: 50;
+}
   .resume-box p{max-width:480px;margin:0 auto 20px;}
 
   /* ---------- contact ---------- */
@@ -207,5 +252,23 @@
   /* ---------- footer ---------- */
   footer{padding:34px 0;text-align:center;}
   footer p{margin:4px 0;font-size:13px;color:var(--para);}
-  .footer-links{display:flex;justify-content:center;gap:18px;margin-bottom:14px;}
-  .footer-links a{font-size:13.5px;}
+  
+  .footer-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    margin-bottom:18px;
+}
+
+.footer-links a{
+    color:#38bdf8;
+    font-size:30px;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.footer-links a:hover{
+    color:#ffffff;
+    transform:scale(1.2);
+}
